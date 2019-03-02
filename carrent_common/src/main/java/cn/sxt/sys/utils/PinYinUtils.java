@@ -7,11 +7,12 @@ import net.sourceforge.pinyin4j.format.HanyuPinyinToneType;
 import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
 
 /**
- * 中文转拼音的工具类
- * 
- * @author LJH
- * 
- */
+* @Description: 中文转拼音的工具类
+* @param
+* @Return:
+* @Author: Mr.Wen
+* @Date: 2019/3/2 19:24
+*/
 public class PinYinUtils {
 
 	/**
@@ -20,7 +21,8 @@ public class PinYinUtils {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		System.out.println(toFirstChar("张小明").toUpperCase()); // 转为首字母大写
+		// 转为首字母大写
+		System.out.println(toFirstChar("张小明").toUpperCase());
 		System.out.println(toPinyin("张小明"));
 	}
 
@@ -32,7 +34,8 @@ public class PinYinUtils {
 	 */
 	public static String toFirstChar(String chinese) {
 		String pinyinStr = "";
-		char[] newChar = chinese.toCharArray(); // 转为单个字符
+		// 转为单个字符
+		char[] newChar = chinese.toCharArray();
 		HanyuPinyinOutputFormat defaultFormat = new HanyuPinyinOutputFormat();
 		defaultFormat.setCaseType(HanyuPinyinCaseType.LOWERCASE);
 		defaultFormat.setToneType(HanyuPinyinToneType.WITHOUT_TONE);
