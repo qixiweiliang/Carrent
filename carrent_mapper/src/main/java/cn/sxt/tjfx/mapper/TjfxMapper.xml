@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.sxt.tjfx.mapper.TjfxMapper">
+    <select id="queryAllCustomerArea" resultType="cn.sxt.tjfx.domian.PieEntity">
+        select count(1) as value ,address as name from  bus_customers  group by address
+    </select>
+    <!--年度月份业绩-->
+    <select id="queryjYearMonthLineForJchen" resultType="cn.sxt.tjfx.domian.LineEntity">
+        select month(begindate) as month, sum(price) as value  from bus_rents where  YEAR(begindate) =#{value} GROUP BY month(begindate)
+    </select>
+
+    <!--柱状图业务员业绩-->
+    <select id="queryjYearMonthColumn" resultType="cn.sxt.tjfx.domian.BaseEntity">
+      select sum(price) as value,opername as name from bus_rents
+    where YEAR(begindate)=#{value}
+    group by opername
+    </select>
+</mapper>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	">
+    <!-- 解析db.properies -->
+    <context:property-placeholder location="classpath:db.properties" system-properties-mode="FALLBACK"/>
+    <!-- 声明数据源 -->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="${driver}"/>
+        <property name="url" value="${url}"/>
+        <property name="username" value="${username}"/>
+        <property name="password" value="${password}"/>
+
+        <property name="maxActive" value="${maxActive}"/>
+        <property name="initialSize" value="${initialSize}"/>
+        <property name="maxWait" value="${maxWait}"/>
+        <property name="minIdle" value="${minIdle}"/>
+        <property name="timeBetweenEvictionRunsMillis" value="${timeBetweenEvictionRunsMillis}"/>
+        <property name="minEvictableIdleTimeMillis" value="${minEvictableIdleTimeMillis}"/>
+        <property name="testWhileIdle" value="${testWhileIdle}"/>
+        <property name="testOnBorrow" value="${testOnBorrow}"/>
+        <property name="testOnReturn" value="${testOnReturn}"/>
+        <property name="poolPreparedStatements" value="${poolPreparedStatements}"/>
+        <property name="maxOpenPreparedStatements" value="${maxOpenPreparedStatements}"/>
+        <property name="filters" value="${filters}"/>
+    </bean>
+
+    <!-- 声明sqlSessionFactory -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="configLocation" value="classpath:mybatis_cfg.xml"/>
+        <!-- 加载mapper.xml -->
+        <property name="mapperLocations">
+            <array>
+                <value>classpath:cn/sxt/sys/mapper/*.xml</value>
+                <value>classpath:cn/sxt/bus/mapper/*.xml</value>
+                <value>classpath:cn/sxt/tjfx/mapper/*.xml</value>
+            </array>
+        </property>
+
+        <property name="plugins">
+            <bean class="com.github.pagehelper.PageInterceptor"/>
+        </property>
+    </bean>
+    <!-- 扫描XXXMapper -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="cn.sxt.bus.mapper,cn.sxt.sys.mapper,cn.sxt.tjfx.mapper"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+    </bean>
+    <!-- 配置sqlsessionFacotry -->
+</beans>

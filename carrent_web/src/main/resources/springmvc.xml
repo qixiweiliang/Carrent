@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+    <!-- 扫描controller -->
+    <context:component-scan base-package="cn.sxt.bus.controller"/>
+    <context:component-scan base-package="cn.sxt.sys.controller"/>
+    <context:component-scan base-package="cn.sxt.tjfx.controller"/>
+    <!-- 配置注解的映射器和适配器   这里面加入了ajax交互的json数据处理。自定义类型转化 拦截器等等 -->
+    <mvc:annotation-driven/>
+
+    <!-- 配置转发页面地址的前缀 视图解析器 针对请求跳转-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+          id="internalResourceViewResolver">
+        <!--&lt;!&ndash; 配置转发页面地址的后缀 &ndash;&gt;-->
+        <property name="prefix" value="/WEB-INF/view/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+
+    <!-- 文件上传的配置 id不能变 開始-->
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!--编码 -->
+        <property name="defaultEncoding" value="utf-8"/>
+        <!--最大支持的文件大小 20M -->
+        <property name="maxUploadSize" value="21474836480"/>
+        <!-- 文件上传的临时目录 -->
+        <property name="uploadTempDir" value="/upload/temp/"/>
+    </bean>
+    <!-- 文件上传的配置 id不能变 结束-->
+
+    <!-- 拦截器配置 -->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!--配置拦截路径-->
+            <mvc:mapping path="/**"/>
+            <!--配置放行请求路径-->
+            <mvc:exclude-mapping path="/login/toLogin*"/>
+            <mvc:exclude-mapping path="/login/login*"/>
+            <!--配置拦截对象-->
+            <bean class="cn.sxt.sys.inteceptor.AppSessionInteceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+    <!-- 如果前端控制器配置的 / -->
+    <mvc:default-servlet-handler/>
+    <!--项目发布后在配置-->
+</beans>
+

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/carrent_web" />
+  </component>
+  <component name="Kotlin2JsCompilerArguments">
+    <option name="sourceMapEmbedSources" />
+    <option name="sourceMapPrefix" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/common/pom.xml" />
+        <option value="$PROJECT_DIR$/carrent_common/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/carrent_controller/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="libraryTable">
+    <library name="cglib_aop">
+      <CLASSES>
+        <root url="file://F:/尚学堂/jar包/cglib_aop" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+      <jarDirectory url="file://F:/尚学堂/jar包/cglib_aop" recursive="false" />
+    </library>
+    <library name="ChineseToPinYin">
+      <CLASSES>
+        <root url="file://F:/尚学堂/jar包/ChineseToPinYin" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+      <jarDirectory url="file://F:/尚学堂/jar包/ChineseToPinYin" recursive="false" />
+    </library>
+    <library name="commons">
+      <CLASSES>
+        <root url="file://F:/尚学堂/jar包/commons" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+      <jarDirectory url="file://F:/尚学堂/jar包/commons" recursive="false" />
+    </library>
+    <library name="dataSource">
+      <CLASSES>
+        <root url="file://F:/尚学堂/jar包/数据源/dataSource" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+      <jarDirectory url="file://F:/尚学堂/jar包/数据源/dataSource" recursive="false" />
+    </library>
+    <library name="dom4j-1.6.1">
+      <CLASSES>
+        <root url="jar://F:/尚学堂/jar包/dom4j-1.6.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="druid_albb">
+      <CLASSES>
+        <root url="file://F:/尚学堂/jar包/数据源/druid_albb" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+      <jarDirectory url="file://F:/尚学堂/jar包/数据源/druid_albb" recursive="false" />
+    </library>
+    <library name="exportExcl_poi">
+      <CLASSES>
+        <root url="file://F:/尚学堂/jar包/exportExcl_poi" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+      <jarDirectory url="file://F:/尚学堂/jar包/exportExcl_poi" recursive="false" />
+    </library>
+    <library name="fastjson-1.2.41">
+      <CLASSES>
+        <root url="jar://F:/尚学堂/jar包/json解析的jar/fastjson-1.2.4.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="fileupload">
+      <CLASSES>
+        <root url="file://F:/尚学堂/jar包/fileupload" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+      <jarDirectory url="file://F:/尚学堂/jar包/fileupload" recursive="false" />
+    </library>
+    <library name="Jackson">
+      <CLASSES>
+        <root url="file://F:/尚学堂/jar包/restful/Jackson" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+      <jarDirectory url="file://F:/尚学堂/jar包/restful/Jackson" recursive="false" />
+    </library>
+    <library name="jstl_1">
+      <CLASSES>
+        <root url="file://F:/尚学堂/jar包/jstl_1.2" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+      <jarDirectory url="file://F:/尚学堂/jar包/jstl_1.2" recursive="false" />
+    </library>
+    <library name="mybatis_jar">
+      <CLASSES>
+        <root url="file://F:/尚学堂/jar包/mybatis_jar" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+      <jarDirectory url="file://F:/尚学堂/jar包/mybatis_jar" recursive="false" />
+    </library>
+    <library name="mysql-connector-java-5.1.20-bin">
+      <CLASSES>
+        <root url="jar://F:/尚学堂/jar包/mysql-connector-java-5.1.20-bin.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="ojdbc61">
+      <CLASSES>
+        <root url="jar://F:/尚学堂/jar包/ojdbc6.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="pagehelper">
+      <CLASSES>
+        <root url="file://F:/尚学堂/jar包/pagehelper" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+      <jarDirectory url="file://F:/尚学堂/jar包/pagehelper" recursive="false" />
+    </library>
+    <library name="reverse engineering_jar">
+      <CLASSES>
+        <root url="file://F:/尚学堂/jar包/reverse engineering_jar" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+      <jarDirectory url="file://F:/尚学堂/jar包/reverse engineering_jar" recursive="false" />
+    </library>
+    <library name="spring_mybatis">
+      <CLASSES>
+        <root url="file://F:/尚学堂/jar包/spring_mybatis" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+      <jarDirectory url="file://F:/尚学堂/jar包/spring_mybatis" recursive="false" />
+    </library>
+    <library name="springmvc">
+      <CLASSES>
+        <root url="file://F:/尚学堂/jar包/springmvc" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+      <jarDirectory url="file://F:/尚学堂/jar包/springmvc" recursive="false" />
+    </library>
+  </component>
+</project>
